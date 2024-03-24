@@ -74,7 +74,12 @@ function App() {
     );
   }, [page]);
 
-  if (countries.length === 0) return <h1>Loading...</h1>;
+  if (countries.length === 0)
+    return (
+      <div className="container">
+        <div className="loader"></div>
+      </div>
+    );
 
   return (
     <>
