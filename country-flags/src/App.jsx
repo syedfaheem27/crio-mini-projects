@@ -91,6 +91,7 @@ function App() {
                 key={country.name.common}
                 flag={country.flags.png ?? country.flags.svg}
                 name={country.name.common}
+                alt={country.flags.alt}
               />
             );
           })}
