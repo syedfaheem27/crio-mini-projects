@@ -33,7 +33,7 @@ function App() {
           <label htmlFor="last">Last Name:</label>
           <input type="text" required id='last' name="last" />
         </div>
-        <button>Submit</button>
+        <button type='submit'>Submit</button>
       </form>
 
       <section className='full-name'>
