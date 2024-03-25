@@ -51,13 +51,16 @@ function App() {
       });
     };
     const observer = new IntersectionObserver(obsCallback, options);
-
-    if (ref.current) observer.observe(ref.current);
+    let copy_ref;
+    if (ref.current) {
+      copy_ref = ref.current;
+      observer.observe(ref.current)
+    }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (copy_ref) observer.unobserve(copy_ref);
     };
-  }, [ref.current, countries]);
+  }, [ref, countries]);
 
   useEffect(() => {
     if (page === 1) return;
