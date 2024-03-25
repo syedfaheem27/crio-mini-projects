@@ -13,7 +13,7 @@ function App() {
     const lastName = formData.get("last");
 
     if (!firstName || !lastName)
-      return;
+      return setFullName("")
 
     setFullName(`${firstName} ${lastName}`)
   }
