@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+.label {
+  margin: 1rem 1rem;
+  padding: 1rem 0;
+}
+
+.count {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.count span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin: 1rem;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
