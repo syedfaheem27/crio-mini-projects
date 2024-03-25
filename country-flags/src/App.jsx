@@ -15,6 +15,7 @@ function App() {
       if (!res.ok) throw new Error("Some Error occurred!");
 
       const data = await res.json();
+      console.log(data)
       DATA = data;
       setCountries(
         DATA.filter((_, i) => {
@@ -36,8 +37,8 @@ function App() {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      rootMargin: "0px 0px 96px 0px",
+      threshold: 0.1,
     };
 
     const obsCallback = (entries, observer) => {
