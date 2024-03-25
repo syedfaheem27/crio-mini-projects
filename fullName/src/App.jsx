@@ -7,13 +7,14 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    setFullName("")
     const formData = new FormData(e.target);
 
     const firstName = formData.get("first");
     const lastName = formData.get("last");
 
-    if (!firstName || !lastName)
-      return setFullName("")
+    if (!firstName.trim() || !lastName.trim())
+      return
 
     setFullName(`${firstName} ${lastName}`)
   }
