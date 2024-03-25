@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
   const [fullName, setFullName] = useState("")
@@ -14,7 +13,7 @@ function App() {
     const lastName = formData.get("last");
 
     if (!firstName.trim() || !lastName.trim())
-      return
+      return;
 
     setFullName(`${firstName} ${lastName}`)
   }
@@ -37,13 +36,12 @@ function App() {
         <button type='submit'>Submit</button>
       </form>
 
-      <section className='full-name'>
-        {
-          fullName && <h4>
-            Full Name: {fullName}
-          </h4>
-        }
-      </section>
+
+      {
+        fullName && <h4>
+          Full Name: {fullName}
+        </h4>
+      }
     </>
   )
 }
