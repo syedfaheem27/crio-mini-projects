@@ -8,8 +8,8 @@ function App() {
       <Counter.Label label="Counter App" />
       <Counter.Count />
       <div className='btn'>
-        <Counter.Increment icon="Increment" />
-        <Counter.Decrement icon="Decrement" />
+        <Counter.Increment icon="Increment:" />
+        <Counter.Decrement icon="Decrement:" />
       </div>
 
     </Counter>
