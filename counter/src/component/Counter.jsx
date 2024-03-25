@@ -26,8 +26,7 @@ const Count = () => {
     const { count } = useContext(CounterContext);
 
     return <section className="count">
-        <h2>Count</h2>
-        <span>{count}</span>
+        {`Count:  ${count}`}
     </section>
 }
 const Increment = ({ icon, jump = 1 }) => {
